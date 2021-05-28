@@ -9,13 +9,13 @@ contract MVP {
     event WordsChanged(string newWords);
 
     // Stores a new string of words in the contract
-    function store(string newWords) public {
+    function store(string memory newWords) public {
         words = newWords;
         emit WordsChanged(newWords);
     }
 
     // Reads the last stored value
-    function retrieve() public view returns (string) {
+    function retrieve() public view returns (string memory) {
         return words;
     }
 }
